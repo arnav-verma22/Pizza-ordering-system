@@ -7,6 +7,18 @@
 <title>Login Page</title>
 </head>
 <body>
-	
+	<div style="text-align:center;">
+		<h1>Login Page</h1>
+		
+		<form action="MyLoginServlet" method="get">
+			<input type="text" placeholder="Enter your username" name="username"/><br>
+			<input type="password" placeholder="Enter your password" name="pass"/><br>
+			<input type="submit" value="login" name="login"/>
+			<input type="reset" value="Reset"/>
+			<p>
+			
+			</p>
+		</form>
+	</div>
 </body>
 </html>
