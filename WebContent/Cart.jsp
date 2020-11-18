@@ -11,6 +11,28 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<h1 style="text-align:center;">Cart</h1>
+<div style="text-align:center;">
+	<%
+		ArrayList<Pizza> list1 = (ArrayList<Pizza>)session.getAttribute("Cart");
+		int total = 0;
+		for(Pizza pz:list1)
+		{
+			out.println("Pizza : " + pz.getName() + "<br>");
+			
+			out.println("Price: " + pz.getPrice() + "<br>");
+			total += pz.getPrice();
+			out.println("<br><br>");
+		}
+		out.println("Total Price = " + total + "<br>");
+		if(list1.size() == 0)
+		{
+			out.println("Sorry No PGs available, try reducing filters..");
+		}
+		
+					
+	%>
+	
+	</div>
 </body>
 </html>
