@@ -28,7 +28,13 @@
 			<input type="submit" value="login" name="login"/>
 			<input type="reset" value="Reset"/>
 			<p>
-			
+			<%
+				
+				if(request.getAttribute("Arnav") != null)
+				{	
+					out.println(request.getAttribute("Arnav"));
+				}
+			%>
 			</p>
 		</form>
 	</div>
