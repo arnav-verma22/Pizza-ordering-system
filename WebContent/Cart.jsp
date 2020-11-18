@@ -32,7 +32,9 @@
 		
 					
 	%>
-	
+	<form action="Order.jsp">
+		<br><input type="submit" value="Place order" name="add">
+	</form>
 	</div>
 </body>
 </html>
