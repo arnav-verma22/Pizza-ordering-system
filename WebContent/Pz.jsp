@@ -15,7 +15,10 @@
 	<form action="Cart.jsp">
 		<input type="submit" value="Cart" name="add">
 	</form>
-	
+	<p> This is just a prototype more features and enhancements are yet to come...</p>
+		
+		<p>All rights reserved</p>
+	 
 	</div>
 </body>
 </html>
