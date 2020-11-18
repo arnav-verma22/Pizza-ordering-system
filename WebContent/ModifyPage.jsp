@@ -10,6 +10,18 @@
 <body>	
 	<h1>Modify your PGs</h1>
 		
-		
+		<form action="Modifyserv" >
+			<c:forEach items="${list}" var="Pg">
+			<input type="radio"  placeholder="Enter the Address" name="address" value="${Pg.address}"/>${Pg.address}<br>
+			<input type="checkbox"  placeholder="Enter your name" value="${Pg.name}" name="name"/>${Pg.name}<br>
+			<input type="hidden" name="num"/>${Pg.contact}<br>
+			<input type="hidden" placeholder="Room type AC/N-AC" name="room"/>${Pg.room}<br>
+			<input type="hidden" placeholder="Pg for boys/girls" name="gen"/>${Pg.gen}<br>
+			<input type="hidden" placeholder="Price of PG" name="price"/>${Pg.price}<br>
+			<input type="hidden" placeholder="No. of beds" name="seater"/>${Pg.seater}<br>
+			
+			</c:forEach>
+			<input type="submit" value="Modify" name="modifythis"/>
+		</form>
 </body>
 </html>
