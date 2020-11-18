@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	
+	<div style="margin-left:500px;">
+	<h1> Welcome <% out.println(session.getAttribute("user")); %></h1>
+	</div>
 </body>
 </html>
