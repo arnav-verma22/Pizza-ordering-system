@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<h1 style="text-align:center;">Added to Cart</h1>
 	
 </body>
 </html>
