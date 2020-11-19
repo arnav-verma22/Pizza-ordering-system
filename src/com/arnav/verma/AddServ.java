@@ -45,7 +45,29 @@ public class AddServ extends HttpServlet {
 		int price = Integer.parseInt(request.getParameter("price"));
 		int seater = Integer.parseInt(request.getParameter("seater"));
 		
-		
+		String email= (String) session.getAttribute("user");
+		try {
+			con = MyDBConnection.GetConnection();
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		ActionDAO add = new ActionDAO(con);
+		try {
+			add.Insert(name, num, room, address, gen, price, seater, email);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		out.println("PG added");
+		response.sendRedirect("Sch.jsp");
+		out.println("PG added");
+		try {
+			MyDBConnection.CloseConnection(con);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	/**
