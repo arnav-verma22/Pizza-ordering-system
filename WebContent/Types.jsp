@@ -8,5 +8,17 @@
 </head>
 <body>
 
+
+<div style="text-align:center;">
+
+	<form action="Searchserv">
+		<input type="submit" value="Veg" name="veg"><br>
+	
+		<input type="submit" value="Non-veg" name="nonveg"><br>
+	
+		<input type="submit" value="Sides" name="sides"><br>
+	</form>
+	
+	</div>
 </body>
 </html>
