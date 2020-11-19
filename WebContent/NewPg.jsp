@@ -32,7 +32,21 @@
 			<input type="submit" value="Add"/>
 		</form>
 	</c:if>
-	
+	<c:if test="${req == se}">
+	<h1>Modify Details</h1>
+		<form action="Modifyserv" method="get">
+		<c:forEach items="${list1}" var="Pg">
+			<input value= "${Pg.name}"  type="text" placeholder="Enter your name" name="name"/><br>
+			<input value= "${Pg.contact}" type="text" placeholder="Enter your Contact No." name="num"/><br>
+			<input value= "${Pg.address}"  type="text" placeholder="Enter the Address" name="address"/><br>
+			<input value= "${Pg.room}" type="text" placeholder="Room type AC/N-AC" name="room"/><br>
+			<input value= "${Pg.gen}" type="text" placeholder="Pg for boys/girls" name="gen"/><br>
+			<input value= "${Pg.price}" type="number" placeholder="Price of PG" name="price"/><br>
+			<input value= "${Pg.seater}" type="number" placeholder="No. of beds" name="seater"/><br>
+		</c:forEach>	
+			<input type="submit" value="Modify"/>
+		</form>
+	</c:if>
 		
 	</div>
 </body>
