@@ -40,7 +40,18 @@ public class FilterServ extends HttpServlet {
 		String gen = request.getParameter("gen");
 		int seater = Integer.parseInt(request.getParameter("seater"));
 		int price = Integer.parseInt(request.getParameter("price"));
-		
+		System.out.println(room + ", " + address + ", " + gen + ", " + price + ", " + seater);
+		if(room != null)
+			str.put("room", room);
+		if(address != null)
+			str.put("address", address);
+		if(gen != null)
+			str.put("gen", gen);
+		if(price != 0)	
+			ints.put("price", price);
+		if(seater != 0)
+			ints.put("seater", seater);
+
 		
 		
 	}
