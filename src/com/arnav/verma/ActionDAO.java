@@ -9,6 +9,14 @@ import java.util.*;
 
 class ActionDAO
 {
+	private Connection con;
+
+	public ActionDAO(Connection con)
+	{
+		this.con = con;
+	}
+	
+	
 	
 	
 }
