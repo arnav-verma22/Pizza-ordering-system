@@ -52,6 +52,20 @@ public class FilterServ extends HttpServlet {
 		if(seater != 0)
 			ints.put("seater", seater);
 
+		try {
+			con = MyDBConnection.GetConnection();
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}
+		
+		ActionDAO act = new ActionDAO(con);
+		
+		 try {
+			thelist = act.FilterSearch(str, ints);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
 		
 		
 	}
