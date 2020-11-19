@@ -28,6 +28,23 @@
 			<input type="submit" value="Add to Cart" name="modifythis"/>
 		</form>
 	</div>
+	<%
+		/*ArrayList<Pizza> list1 = (ArrayList<Pizza>)session.getAttribute("list");
+		for(Pizza pz:list1)
+		{
+			out.println("Owner's Name: " + pz.getName() + "<br>");
+			/*out.println("Contact: " + pg.getContact() + "<br>");
+			out.println("City: " + pg.getAddress() + "<br>");
+			out.println("Room Type: " + pg.getRoom() + "<br>");
+			out.println("Price: " + pz.getPrice() + "<br>");
+			out.println("<br><br>");
+		}
+		if(list1.size() == 0)
+		{
+			out.println("Sorry No PGs available, try reducing filters..");
+		}*/
+					
+	%>
 	
 </body>
 </html>
