@@ -34,6 +34,17 @@ public class AddServ extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		HttpSession session = request.getSession();
+		Connection con = null;
+		PrintWriter out = response.getWriter();
+		String name = request.getParameter("name");
+		String address = request.getParameter("address");
+		String room = request.getParameter("room");
+		String gen = request.getParameter("gen");
+		String num = request.getParameter("num");
+		int price = Integer.parseInt(request.getParameter("price"));
+		int seater = Integer.parseInt(request.getParameter("seater"));
+		
 		
 	}
 
