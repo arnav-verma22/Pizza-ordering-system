@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<h1 style="text-align:center;">Pizza Feast</h1>
 
 <div style="text-align:center;">
 
