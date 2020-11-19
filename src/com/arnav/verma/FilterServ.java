@@ -65,7 +65,9 @@ public class FilterServ extends HttpServlet {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
+		session.setAttribute("list", thelist);
+		response.sendRedirect("Searchpage.jsp");
+		//System.out.println(room + ", " + address + ", " + gen + ", " + price + ", " + seater);
 		
 		
 	}
