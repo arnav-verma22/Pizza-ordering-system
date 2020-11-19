@@ -11,7 +11,11 @@
 <title>Search PGs</title>
 </head>
 <body>
-	
+	<%
+		String my = null;
+		if(session.getAttribute("my") != null)
+			my = session.getAttribute("my").toString();
+	%>
 	<h1 style="text-align:center;">Pizza Feast</h1>
 <div style="text-align:center;">
 	
