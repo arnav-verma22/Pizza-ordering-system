@@ -45,6 +45,11 @@
 		}*/
 					
 	%>
-	
+	<c:if test="${my != null}">
+		<form action="Modifyserv" >
+			<input type="submit" value="Modify" name="modify"/>
+		</form>
+	</c:if>
+	<% session.setAttribute("my", null); %>
 </body>
 </html>
