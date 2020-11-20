@@ -15,6 +15,18 @@ class LoginDAO
 	{
 		this.con = con;
 	}
+	public boolean Check(String username, String password) throws SQLException
+	{
+		String query = "select * from login where email = '" + username + "' and password = '" + password + "';";
+		Statement st = con.createStatement();
+		ResultSet rs = st.executeQuery(query);
+		if (rs.next())
+		{
+			return true;
+		}
+		else
+			return false;
+	}
 	
 	
 }
