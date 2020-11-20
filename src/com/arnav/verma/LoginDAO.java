@@ -27,6 +27,11 @@ class LoginDAO
 		else
 			return false;
 	}
-	
+	public void CreateAccount(String username , String password) throws SQLException 
+	{
+		String query = "insert into login values('"+ username + "', '" + password + "';";
+		Statement st = con.createStatement();
+		st.executeUpdate(query);
+	}
 	
 }
