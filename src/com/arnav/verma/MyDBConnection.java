@@ -27,5 +27,9 @@ public class MyDBConnection
 //		st.close();
 //		con.close();
 	}
-	
+	public static void CloseConnection(Connection con) throws SQLException 
+	{
+		con.close();
+		//PreparedStatement pst = con.prepareStatement("insert into pg values(?,?,?,?,?)");
+	}
 }
