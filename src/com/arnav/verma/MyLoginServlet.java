@@ -54,7 +54,11 @@ import javax.servlet.RequestDispatcher;
 					
 					//out.println("Sorry username or password is incorrect");
 				}
-			} 
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
 		}
 	
 		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
