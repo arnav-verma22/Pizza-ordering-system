@@ -32,6 +32,11 @@ import javax.servlet.RequestDispatcher;
 			session.setAttribute("user", username);
 			session.setAttribute("pass", password);
 			Connection con = null;
+			try {
+				con = MyDBConnection.GetConnection();
+			} catch (ClassNotFoundException | SQLException e) {
+				e.printStackTrace();
+			}
 			
 		}
 	
