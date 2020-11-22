@@ -25,6 +25,13 @@ import javax.servlet.RequestDispatcher;
 	
 		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			
+			PrintWriter out = response.getWriter();
+			String username = request.getParameter("username");
+			String password = request.getParameter("pass");
+			HttpSession session = request.getSession();
+			session.setAttribute("user", username);
+			session.setAttribute("pass", password);
+			Connection con = null;
 			
 		}
 	
