@@ -34,6 +34,13 @@ public class MyPgs extends HttpServlet {
 			session.setAttribute("add", null);
 			response.sendRedirect("NewPg.jsp");
 		}
+		else if(session.getAttribute("user") != null && (request.getParameter("my") != null || session.getAttribute("my") != null) )
+		{
+			//session.setAttribute("my", null);
+			//response.sendRedirect("Searchserv");
+			RequestDispatcher rd  = request.getRequestDispatcher("Searchserv");
+			rd.forward(request, response);
+		}
 		
 	}
 
