@@ -56,7 +56,10 @@ public class Modifyserv extends HttpServlet {
 			response.sendRedirect("AddCart.jsp");
 			
 		}
-			
+			out.println(request.getParameter("addresss"));
+			out.println(request.getParameter("num"));
+			out.println(request.getParameter("price"));
+			out.println(request.getParameter("name"));
 			
 	}
 
