@@ -58,7 +58,11 @@ import javax.servlet.RequestDispatcher;
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
+			try {
+				MyDBConnection.CloseConnection(con);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 	
 		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
