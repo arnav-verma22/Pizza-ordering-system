@@ -47,7 +47,8 @@ public class MyPgs extends HttpServlet {
 			RequestDispatcher rd  = request.getRequestDispatcher("index.jsp");
 			rd.forward(request, response);
 		}
-
+//		request.getParameter("add");
+//		request.getParameter("my");
 	}
 
 	
