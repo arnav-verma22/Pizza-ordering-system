@@ -27,6 +27,13 @@ public class MyPgs extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
+		HttpSession session = request.getSession();
+		
+		if(session.getAttribute("user") != null && (request.getParameter("add") != null || session.getAttribute("add") != null))
+		{
+			session.setAttribute("add", null);
+			response.sendRedirect("NewPg.jsp");
+		}
 		
 	}
 
