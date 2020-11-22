@@ -36,7 +36,27 @@ public class Modifyserv extends HttpServlet {
 		ArrayList<Pizza> list = (ArrayList<Pizza>)session.getAttribute("list");
 		ArrayList<Pizza> cart = new ArrayList<Pizza>();
 	
-		
+		if(session.getAttribute("Cart") != null)
+			cart  = (ArrayList<Pizza>)session.getAttribute("Cart");
+			
+		if(request.getParameter("modifythis") != null)
+		{
+			for (Pizza pz : list) 
+			{
+				if(pz.getName().equalsIgnoreCase(request.getParameter("name")))
+				{
+					
+					System.out.println("found");
+					cart.add(pz);
+					break;
+				}
+			}
+			session.setAttribute("Cart", cart);
+			session.setAttribute("modifythis", request.getParameter("modifythis"));
+			response.sendRedirect("AddCart.jsp");
+			
+		}
+			
 			
 	}
 
