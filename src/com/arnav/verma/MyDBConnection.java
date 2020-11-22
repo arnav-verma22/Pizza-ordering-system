@@ -15,5 +15,17 @@ public class MyDBConnection
 	private static String user = "root";
 	private static String pass = "22@ugust";
 	
+	public static Connection GetConnection() throws ClassNotFoundException, SQLException
+	{
+		Class.forName(driver);
+		Connection con = DriverManager.getConnection(db,user,pass);
+		return con;
+//		String query = "insert into pg values('Praj', '7084329329', 'jaipur', 'NAC Rooms', 'given Wifi')";
+//		java.sql.Statement st = con.createStatement();
+//		int count = st.executeUpdate(query);
+//		System.out.println(count + " rows affected");
+//		st.close();
+//		con.close();
+	}
 	
 }
