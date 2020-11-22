@@ -41,7 +41,13 @@ public class MyPgs extends HttpServlet {
 			RequestDispatcher rd  = request.getRequestDispatcher("Searchserv");
 			rd.forward(request, response);
 		}
-		
+		else
+		{
+			//response.sendRedirect("index.jsp");
+			RequestDispatcher rd  = request.getRequestDispatcher("index.jsp");
+			rd.forward(request, response);
+		}
+
 	}
 
 	
