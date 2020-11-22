@@ -45,7 +45,16 @@ import javax.servlet.RequestDispatcher;
 					response.sendRedirect("MyPgs");
 					out.println("hello world !!");
 				}
-				
+				else
+				{
+					RequestDispatcher rd  = request.getRequestDispatcher("index.jsp");
+					request.setAttribute("Arnav", "Sorry username or password is incorrect");
+					rd.forward(request, response);
+					
+					
+					//out.println("Sorry username or password is incorrect");
+				}
+			} 
 		}
 	
 		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
