@@ -37,7 +37,15 @@ import javax.servlet.RequestDispatcher;
 			} catch (ClassNotFoundException | SQLException e) {
 				e.printStackTrace();
 			}
-			
+			LoginDAO login = new LoginDAO(con);
+			try {
+				if(login.Check(username, password))
+				{
+		
+					response.sendRedirect("MyPgs");
+					out.println("hello world !!");
+				}
+				
 		}
 	
 		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
