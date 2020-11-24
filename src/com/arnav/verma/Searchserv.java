@@ -48,7 +48,15 @@ public class Searchserv extends HttpServlet {
 			type = "nonveg";
 		else
 			type = "sides";
-//		
+//		System.out.println(request.getParameter("customer") + "<br>");
+//		System.out.println(session.getAttribute("my") + "<br>");
+		try {
+			con = MyDBConnection.GetConnection();
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}
+		
+		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
