@@ -95,6 +95,7 @@ public class Searchserv extends HttpServlet {
 		}
 		
 		
+		response.sendRedirect("Searchpage.jsp");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
