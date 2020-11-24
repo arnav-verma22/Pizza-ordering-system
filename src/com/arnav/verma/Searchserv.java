@@ -42,7 +42,13 @@ public class Searchserv extends HttpServlet {
 		ArrayList<Pizza> thelist = null;
 		ArrayList<Pizza> cart = null;
 		String type;
-		
+		if(request.getParameter("veg") != null)
+			type = "veg";
+		else if(request.getParameter("nonveg") != null)
+			type = "nonveg";
+		else
+			type = "sides";
+//		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
