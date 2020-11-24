@@ -36,6 +36,12 @@ public class Searchserv extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
+		HttpSession session = request.getSession();
+		PrintWriter out = response.getWriter();
+		Connection con = null;
+		ArrayList<Pizza> thelist = null;
+		ArrayList<Pizza> cart = null;
+		String type;
 		
 	}
 
