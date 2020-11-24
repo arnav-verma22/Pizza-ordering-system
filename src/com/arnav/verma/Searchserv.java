@@ -83,6 +83,10 @@ public class Searchserv extends HttpServlet {
 			}
 		}*/
 		
+		session.setAttribute("list", thelist);
+		if(session.getAttribute("Cart") == null)
+			session.setAttribute("Cart", cart);
+		
 		
 	}
 
