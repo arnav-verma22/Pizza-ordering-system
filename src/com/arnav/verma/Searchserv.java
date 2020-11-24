@@ -56,6 +56,14 @@ public class Searchserv extends HttpServlet {
 			e.printStackTrace();
 		}
 		
+		ActionDAO act = new ActionDAO(con);
+		
+		if(request.getParameter("my") != null)
+		{
+			session.setAttribute("my", request.getParameter("my"));
+			System.out.println(request.getParameter("my"));
+		}
+		
 		
 	}
 
