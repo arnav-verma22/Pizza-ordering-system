@@ -73,6 +73,16 @@ public class Searchserv extends HttpServlet {
 			}
 		}
 			
+		/*if(session.getAttribute("my") != null)
+		{
+			try {
+				System.out.println(session.getAttribute("user"));
+				thelist = act.Search(session.getAttribute("user").toString());
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}*/
+		
 		
 	}
 
