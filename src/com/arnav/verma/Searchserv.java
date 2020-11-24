@@ -88,6 +88,12 @@ public class Searchserv extends HttpServlet {
 			session.setAttribute("Cart", cart);
 		
 		out.println("Search complete");
+		try {
+			MyDBConnection.CloseConnection(con);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
 		
 	}
 
