@@ -64,6 +64,15 @@ public class Searchserv extends HttpServlet {
 			System.out.println(request.getParameter("my"));
 		}
 		
+		if(session.getAttribute("my") == null)
+		{
+			try {
+				 thelist = act.Search(type);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+			
 		
 	}
 
